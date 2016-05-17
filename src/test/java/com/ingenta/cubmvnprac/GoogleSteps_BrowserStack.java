@@ -22,24 +22,24 @@ public class GoogleSteps_BrowserStack {
 	
 	@Given("^BrowserStack account is running$")
 	public void browserstack_account_is_running() throws Throwable {
-		String exePath = "C:\\Software and Frameworks\\Java\\Selenium\\WebDriver Java client\\drivers\\chromedriver.exe";
-		System.setProperty("webdriver.chrome.driver", exePath);
-		driver = new ChromeDriver();
+//		String exePath = "C:\\Software and Frameworks\\Java\\Selenium\\WebDriver Java client\\drivers\\chromedriver.exe";
+//		System.setProperty("webdriver.chrome.driver", exePath);
+//		driver = new ChromeDriver();
 		
-//		String USERNAME = System.getenv("USERNAME");
-//		String AUTOMATE_KEY = System.getenv("AUTOMATE_KEY");
-//        String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-//      
-//		DesiredCapabilities caps = new DesiredCapabilities();
-//	    caps.setCapability("browserstack.debug", "true");
-//	    
-//	    caps.setCapability("browser", "Opera");
-//	    caps.setCapability("browser_version", "12.15");
-//	    caps.setCapability("os", "Windows");
-//	    caps.setCapability("os_version", "8.1");
-//	    caps.setCapability("resolution", "1366x768");
-//
-//	    driver = new RemoteWebDriver(new URL(URL), caps);
+		String USERNAME = System.getenv("USERNAME");
+		String AUTOMATE_KEY = System.getenv("AUTOMATE_KEY");
+        String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
+      
+		DesiredCapabilities caps = new DesiredCapabilities();
+	    caps.setCapability("browserstack.debug", "true");
+	    
+	    caps.setCapability("browser", "Opera");
+	    caps.setCapability("browser_version", "12.15");
+	    caps.setCapability("os", "Windows");
+	    caps.setCapability("os_version", "8.1");
+	    caps.setCapability("resolution", "1366x768");
+
+	    driver = new RemoteWebDriver(new URL(URL), caps);
 	}
 
 	@Given("^Google UK url in BrowserStack : \"(.*?)\"$")
@@ -69,16 +69,16 @@ public class GoogleSteps_BrowserStack {
 	@Then("^Google UK finds search results in BrowserStack$")
 	public void google_UK_finds_search_results_in_BrowserStack() throws Throwable {
 		Thread.sleep(5000);
-		Assert.assertEquals("Ingenta - Google Search", driver.getTitle());
-//		try {
-//		    Assert.assertTrue(driver.getTitle().contains("Ingenta"));	    	
-//	    }catch (Throwable ex) {
-//	    	System.out.println("I have found an error!!!");
-//	    	System.out.println("ERROR MESSAGE CAPTURED BY XIN HE is: " + ex.getMessage());
-//		    Thread.sleep(1000);
-//	    	Assert.fail("Oh my god! It's wrong!");
-//	    }
-//	    Thread.sleep(1000);		
+//		Assert.assertEquals("Ingenta - Google Search", driver.getTitle());
+		try {
+		    Assert.assertTrue(driver.getTitle().contains("Ingenta"));	    	
+	    }catch (Throwable ex) {
+	    	System.out.println("I have found an error!!!");
+	    	System.out.println("ERROR MESSAGE CAPTURED BY XIN HE is: " + ex.getMessage());
+		    Thread.sleep(1000);
+	    	Assert.fail("Oh my god! It's wrong!");
+	    }
+	    Thread.sleep(1000);		
 	}
 
 	@After
