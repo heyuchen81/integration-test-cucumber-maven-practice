@@ -1,3 +1,4 @@
+
 Feature: Google Search Tests
 
   Scenario Outline: Check Google Search - Simple Keywords

@@ -1,3 +1,4 @@
+@jenkins-maven
 Feature: Belly
 
   Scenario: a few cukes

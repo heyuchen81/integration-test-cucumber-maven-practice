@@ -5,6 +5,6 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(format = { "pretty" }, monochrome = true)
+@CucumberOptions(format = { "pretty" }, tags = "@browser-stack", monochrome = true)
 public class RunTest {
 }
