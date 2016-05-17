@@ -15,16 +15,15 @@ import cucumber.api.java.en.When;
 public class GoogleSteps {
 	private WebDriver driver;
 
-	@Before
-	public void openBrowser() {
-		// Create a new instance of the Firefox driver
-		driver = new FirefoxDriver();
-	}
+//	@Before
+//	public void openBrowser() {
+//		// Create a new instance of the Firefox driver
+//		driver = new FirefoxDriver();
+//	}
 
 	@Given("^Google UK url : \"(.*?)\"$")
 	public void google_UK_url(String url) throws Throwable {
-		// Launch the Online Store Website
-		driver.get(url); // .get("http://www.store.demoqa.com");
+		driver.get(url); 
 		Thread.sleep(3000);
 	}
 
@@ -52,9 +51,9 @@ public class GoogleSteps {
 		Assert.assertEquals("Honey - Google Search", driver.getTitle());
 	}
 
-	@After
-	public void releaseBrowser() {
-		if (driver != null)
-			driver.quit();
-	}
+//	@After
+//	public void releaseBrowser() {
+//		if (driver != null)
+//			driver.quit();
+//	}
 }
