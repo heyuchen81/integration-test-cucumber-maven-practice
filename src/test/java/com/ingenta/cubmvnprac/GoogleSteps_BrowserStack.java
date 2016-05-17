@@ -71,7 +71,7 @@ public class GoogleSteps_BrowserStack {
 		Thread.sleep(5000);
 //		Assert.assertEquals("Ingenta - Google Search", driver.getTitle());
 //		try {
-		    Assert.assertTrue(driver.getTitle().contains("Replicongfds"));	    	
+		    Assert.assertTrue(driver.getTitle().contains("Replicon"));	    	
 //	    }catch (Throwable ex) {
 //	    	System.out.println("I have found an error!!!");
 //	    	System.out.println("ERROR MESSAGE CAPTURED BY XIN HE is: " + ex.getMessage());
