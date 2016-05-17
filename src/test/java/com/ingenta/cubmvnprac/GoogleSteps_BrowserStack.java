@@ -59,7 +59,7 @@ public class GoogleSteps_BrowserStack {
 		WebElement element = driver.findElement(By.name("q"));
 
 		// Enter something to search for
-		element.sendKeys("Rngenta");
+		element.sendKeys("Replicon");
 
 		// Now submit the form. WebDriver will find the form for us from the
 		// element
@@ -70,14 +70,14 @@ public class GoogleSteps_BrowserStack {
 	public void google_UK_finds_search_results_in_BrowserStack() throws Throwable {
 		Thread.sleep(5000);
 //		Assert.assertEquals("Ingenta - Google Search", driver.getTitle());
-		try {
-		    Assert.assertTrue(driver.getTitle().contains("Replicon"));	    	
-	    }catch (Throwable ex) {
-	    	System.out.println("I have found an error!!!");
-	    	System.out.println("ERROR MESSAGE CAPTURED BY XIN HE is: " + ex.getMessage());
-		    Thread.sleep(1000);
-	    	Assert.fail("Oh my god! It's wrong!");
-	    }
+//		try {
+		    Assert.assertTrue(driver.getTitle().contains("Replicongfds"));	    	
+//	    }catch (Throwable ex) {
+//	    	System.out.println("I have found an error!!!");
+//	    	System.out.println("ERROR MESSAGE CAPTURED BY XIN HE is: " + ex.getMessage());
+//		    Thread.sleep(1000);
+//	    	Assert.fail("Oh my god! It's wrong!");
+//	    }
 	    Thread.sleep(1000);		
 	}
 
